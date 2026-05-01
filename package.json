@@ -5,15 +5,21 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:site": "next build",
+    "build:pages": "npm run build:site && npm run build:app-index && node scripts/build-pages.mjs",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build:app-index": "tailwindcss -i app-index/tailwind.input.css -o app-index/tailwind.css --minify",
+    "watch:app-index": "tailwindcss -i app-index/tailwind.input.css -o app-index/tailwind.css --watch"
   },
   "dependencies": {
+    "motion": "^12.38.0",
     "next": "16.2.4",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.2.4",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
