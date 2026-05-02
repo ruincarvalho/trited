@@ -10,9 +10,9 @@ import {
 
 const navLinks = [
   { label: "Serviços", href: "#servicos", index: "01" },
-  { label: "Certificação", href: "#certificacao", index: "02" },
-  { label: "Áreas", href: "#clientes", index: "03" },
-  { label: "Processo", href: "#processo", index: "04" },
+  { label: "Obra", href: "#obra", index: "02" },
+  { label: "Processo", href: "#processo", index: "03" },
+  { label: "Empresa", href: "#sobre", index: "04" },
   { label: "FAQ", href: "#faq", index: "05" },
   { label: "Contacto", href: "#contactos", index: "06" },
 ];
@@ -61,7 +61,7 @@ export default function Header() {
               Trited<span style={{ color: "var(--accent)" }}>.</span>
             </span>
             <span className="hidden sm:inline eyebrow" style={{ fontSize: "0.625rem" }}>
-              ITED/ITUR · MMXXVI
+              ITED · ITUR
             </span>
           </a>
 

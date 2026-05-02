@@ -48,7 +48,7 @@ export default function FAQ() {
             className="col-span-12 lg:col-span-3"
           >
             <span className="eyebrow" style={{ color: "var(--accent)" }}>
-              IX — FAQ
+              05 / FAQ
             </span>
           </motion.div>
 

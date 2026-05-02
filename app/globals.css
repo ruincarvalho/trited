@@ -3,33 +3,29 @@
 :root {
   --font-inter: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-playfair: Georgia, "Times New Roman", serif;
-  --bg: #07090c;
-  --bg-elev: #0e1418;
-  --bg-veil: #101010;
-  --fg: #f2efe7;
-  --fg-muted: #b5aca0;
-  --fg-dim: #746d63;
-  --fg-faint: #3d3934;
-  --line: rgba(242, 239, 231, 0.1);
-  --line-strong: rgba(242, 239, 231, 0.2);
-  --accent: #d9a441;
-  --accent-soft: rgba(217, 164, 65, 0.14);
-  --accent-strong: #f1c766;
-  --copper: #b9693f;
-  --signal: #6cb6a7;
+  --bg: #0a0f14;
+  --bg-elev: #0f1822;
+  --bg-veil: #0d1218;
+  --fg: #ecf0f4;
+  --fg-muted: #9aa6b2;
+  --fg-dim: #5e6975;
+  --fg-faint: #353c45;
+  --line: rgba(236, 240, 244, 0.08);
+  --line-strong: rgba(236, 240, 244, 0.18);
+  --accent: #3aa3d4;
+  --accent-soft: rgba(58, 163, 212, 0.14);
+  --accent-strong: #65bce5;
   --surface-base:
-    linear-gradient(135deg, rgba(108, 182, 167, 0.055) 0%, transparent 28%),
-    linear-gradient(180deg, rgba(255,255,255,0.025) 0%, transparent 18%),
-    radial-gradient(ellipse at 76% 18%, rgba(217, 164, 65, 0.12) 0%, transparent 36%),
+    linear-gradient(180deg, rgba(255,255,255,0.018) 0%, transparent 20%),
+    radial-gradient(ellipse at 78% 12%, rgba(58, 163, 212, 0.08) 0%, transparent 40%),
     var(--bg);
   --surface-elev:
-    linear-gradient(135deg, rgba(217, 164, 65, 0.08) 0%, transparent 32%),
-    linear-gradient(315deg, rgba(108, 182, 167, 0.07) 0%, transparent 38%),
+    linear-gradient(135deg, rgba(58, 163, 212, 0.05) 0%, transparent 38%),
     var(--bg-elev);
   --panel:
-    linear-gradient(145deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.018) 48%, rgba(217,164,65,0.055) 100%);
+    linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.012) 50%, rgba(58,163,212,0.04) 100%);
   --panel-hover:
-    linear-gradient(145deg, rgba(255,255,255,0.095) 0%, rgba(255,255,255,0.024) 50%, rgba(108,182,167,0.07) 100%);
+    linear-gradient(145deg, rgba(255,255,255,0.075) 0%, rgba(255,255,255,0.02) 50%, rgba(58,163,212,0.07) 100%);
 }
 
 @theme inline {
@@ -42,7 +38,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 html {
-  background: #050608;
+  background: #06090d;
   color: var(--fg);
   scroll-behavior: smooth;
   font-feature-settings: "ss01", "kern";
@@ -50,12 +46,11 @@ html {
 
 body {
   background:
-    linear-gradient(rgba(242,239,231,0.018) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(242,239,231,0.014) 1px, transparent 1px),
-    radial-gradient(ellipse at 18% 0%, rgba(108,182,167,0.12) 0%, transparent 36%),
-    radial-gradient(ellipse at 88% 8%, rgba(217,164,65,0.11) 0%, transparent 30%),
-    #050608;
-  background-size: 56px 56px, 56px 56px, auto, auto, auto;
+    linear-gradient(rgba(236,240,244,0.014) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(236,240,244,0.012) 1px, transparent 1px),
+    radial-gradient(ellipse at 88% 6%, rgba(58,163,212,0.10) 0%, transparent 36%),
+    #06090d;
+  background-size: 56px 56px, 56px 56px, auto, auto;
   color: var(--fg);
   font-family: var(--font-inter), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -72,9 +67,8 @@ body::before {
   pointer-events: none;
   z-index: 0;
   background:
-    linear-gradient(90deg, transparent 0 11.5%, rgba(217,164,65,0.09) 11.5% 11.58%, transparent 11.58% 100%),
-    linear-gradient(90deg, transparent 0 63%, rgba(108,182,167,0.055) 63% 63.08%, transparent 63.08% 100%);
-  opacity: 0.55;
+    linear-gradient(90deg, transparent 0 11.5%, rgba(58,163,212,0.07) 11.5% 11.58%, transparent 11.58% 100%);
+  opacity: 0.5;
 }
 
 ::selection {
@@ -151,10 +145,10 @@ body::before {
 .custom-cursor-ring[data-hovering="true"] {
   width: 56px;
   height: 56px;
-  border-color: rgba(241, 199, 102, 0.98);
+  border-color: rgba(101, 188, 229, 0.95);
   box-shadow:
     0 0 0 1px rgba(7, 9, 12, 0.6),
-    0 0 22px rgba(217, 164, 65, 0.38);
+    0 0 22px rgba(58, 163, 212, 0.38);
 }
 
 .custom-cursor-ring[data-pressed="true"] {
@@ -181,10 +175,10 @@ body::before {
 .custom-cursor-dot[data-hovering="true"] {
   width: 4px;
   height: 4px;
-  background: #f1c766;
+  background: #65bce5;
   box-shadow:
     0 0 0 1px rgba(7, 9, 12, 0.75),
-    0 0 14px rgba(241, 199, 102, 0.55);
+    0 0 14px rgba(101, 188, 229, 0.55);
 }
 
 .eyebrow {
@@ -223,7 +217,7 @@ main > section::after {
   top: 0;
   height: 1px;
   z-index: 0;
-  background: linear-gradient(90deg, transparent, rgba(217,164,65,0.38), rgba(108,182,167,0.22), transparent);
+  background: linear-gradient(90deg, transparent, rgba(58,163,212,0.32), transparent);
 }
 
 .technical-panel {
@@ -240,11 +234,11 @@ main > section::after {
 
 .technical-panel:hover {
   background: var(--panel-hover);
-  border-color: rgba(217, 164, 65, 0.34) !important;
+  border-color: rgba(58, 163, 212, 0.32) !important;
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,0.11),
     0 28px 90px rgba(0,0,0,0.34),
-    0 0 0 1px rgba(217,164,65,0.05);
+    0 0 0 1px rgba(58,163,212,0.06);
 }
 
 main > section > *,

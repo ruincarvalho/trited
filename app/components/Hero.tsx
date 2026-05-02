@@ -29,17 +29,7 @@ export default function Hero() {
       style={{ background: "var(--surface-base)" }}
       aria-label="Apresentação TRITED"
     >
-      {/* Top metadata strip */}
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
-        className="absolute top-24 left-6 lg:left-12 right-6 lg:right-12 z-10 flex items-center"
-      >
-        <span className="eyebrow">N.º 001 — Edição contínua</span>
-      </motion.div>
-
-      <div className="relative flex-1 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 max-w-[1480px] mx-auto px-6 lg:px-12 pt-44 lg:pt-52 pb-24 w-full">
+      <div className="relative flex-1 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 max-w-[1480px] mx-auto px-6 lg:px-12 pt-36 lg:pt-44 pb-24 w-full">
         {/* Headline column */}
         <div className="lg:col-span-7 flex flex-col justify-center">
           <motion.div
@@ -158,7 +148,7 @@ export default function Hero() {
                   y: imageY,
                   scale: imageScale,
                   background:
-                    "linear-gradient(140deg, #172529 0%, #0a0c0f 36%, #241914 70%, #07090c 100%)",
+                    "linear-gradient(140deg, #15212c 0%, #0a0f14 36%, #0e1822 70%, #06090d 100%)",
                 }}
               />
               {/* SVG line composition — abstract telecom panel */}
@@ -170,8 +160,8 @@ export default function Hero() {
               >
                 <defs>
                   <linearGradient id="strokeFade" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#c9a961" stopOpacity="0.55" />
-                    <stop offset="100%" stopColor="#c9a961" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#3aa3d4" stopOpacity="0.55" />
+                    <stop offset="100%" stopColor="#3aa3d4" stopOpacity="0" />
                   </linearGradient>
                 </defs>
                 {Array.from({ length: 14 }).map((_, i) => (
@@ -198,7 +188,7 @@ export default function Hero() {
                     cx={60 + i * 56}
                     cy={250 + (i % 2) * 30}
                     r={3}
-                    fill="#c9a961"
+                    fill="#3aa3d4"
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 0.85, scale: 1 }}
                     transition={{
@@ -241,12 +231,12 @@ export default function Hero() {
               transition={{ delay: 1.4, duration: 0.8, ease: "easeOut" }}
               className="mt-6 flex items-baseline justify-between"
             >
-              <span className="eyebrow">Técnico / 2026</span>
+              <span className="eyebrow">Equipamento profissional</span>
               <span
                 className="font-serif italic text-sm"
                 style={{ color: "var(--fg-muted)" }}
               >
-                Instalação limpa. Entrega documentada.
+                OTDR · Certificador · Medidor de campos
               </span>
             </motion.div>
           </motion.div>

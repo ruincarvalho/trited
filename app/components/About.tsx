@@ -3,10 +3,13 @@
 import { motion } from "motion/react";
 import SplitWords from "./motion/SplitWords";
 
-const manifesto = [
-  "Uma só especialidade: telecomunicações.",
+const principles = [
+  "Uma só especialidade — só telecomunicações.",
+  "Mão sénior em obra — +50 anos no nosso técnico de referência.",
   "Equipa pequena, decisões rápidas em obra.",
   "Acabamento técnico que se vê dentro do bastidor.",
+  "Cumprir prazos sem bloquear a obra elétrica.",
+  "Certificação e medição com equipamento profissional.",
 ];
 
 export default function About() {
@@ -27,7 +30,7 @@ export default function About() {
             className="col-span-12 lg:col-span-3"
           >
             <span className="eyebrow" style={{ color: "var(--accent)" }}>
-              VII — Empresa
+              04 / Empresa
             </span>
           </motion.div>
           <div className="col-span-12 lg:col-span-9">
@@ -79,7 +82,7 @@ export default function About() {
                 transition={{ duration: 1.2, ease: "easeOut" }}
                 style={{
                   background:
-                    "linear-gradient(135deg, #1c1814 0%, #0a0a0a 50%, #181410 100%)",
+                    "linear-gradient(135deg, #14202b 0%, #0a0f14 50%, #0f1822 100%)",
                 }}
               >
                 <svg
@@ -95,7 +98,7 @@ export default function About() {
                       y1={0}
                       x2={i * 8}
                       y2={100}
-                      stroke="#c9a961"
+                      stroke="#3aa3d4"
                       strokeOpacity={i % 5 === 0 ? 0.35 : 0.12}
                       strokeWidth={0.4}
                     />
@@ -105,7 +108,7 @@ export default function About() {
                     y1="50"
                     x2="240"
                     y2="50"
-                    stroke="#c9a961"
+                    stroke="#3aa3d4"
                     strokeOpacity="0.3"
                     strokeWidth="0.5"
                   />
@@ -170,7 +173,7 @@ export default function About() {
             </p>
 
             <ul className="mt-12 space-y-0">
-              {manifesto.map((m, i) => (
+              {principles.map((m, i) => (
                 <motion.li
                   key={m}
                   initial={{ opacity: 0, x: -16 }}

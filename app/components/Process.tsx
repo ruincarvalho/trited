@@ -135,7 +135,7 @@ export default function Process() {
             className="col-span-12 lg:col-span-3"
           >
             <span className="eyebrow" style={{ color: "var(--accent)" }}>
-              IV — Método
+              03 / Método
             </span>
           </motion.div>
           <motion.div

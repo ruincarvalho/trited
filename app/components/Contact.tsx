@@ -94,7 +94,7 @@ export default function Contact() {
             className="col-span-12 lg:col-span-5"
           >
             <span className="eyebrow" style={{ color: "var(--accent)" }}>
-              XI — Contacto
+              06 / Contacto
             </span>
             <h2
               id="contactos-title"

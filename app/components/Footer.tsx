@@ -9,7 +9,7 @@ const columns = [
   },
   {
     title: "Empresa",
-    items: ["Sobre", "Processo", "Princípios", "Contacto"],
+    items: ["Sobre", "Processo", "Obra", "Contacto"],
   },
   {
     title: "Contacto",
@@ -63,9 +63,9 @@ export default function Footer() {
                 animate={{
                   opacity: [0.4, 1, 0.4],
                   boxShadow: [
-                    "0 0 4px rgba(201,169,97,0.4)",
-                    "0 0 14px rgba(201,169,97,0.8)",
-                    "0 0 4px rgba(201,169,97,0.4)",
+                    "0 0 4px rgba(58,163,212,0.4)",
+                    "0 0 14px rgba(58,163,212,0.8)",
+                    "0 0 4px rgba(58,163,212,0.4)",
                   ],
                 }}
                 transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}

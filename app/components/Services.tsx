@@ -25,24 +25,24 @@ const services = [
     title: "Fibra ótica",
     sub: "FTTH · FTTB",
     desc:
-      "Passagem, fusão, terminação e medição de fibra ótica. Ensaios óticos com equipamentos especializados para redes FTTH e FTTB.",
+      "Passagem, fusão, terminação e ensaios óticos com OTDR para redes FTTH e FTTB. Relatórios prontos a integrar no dossier técnico.",
     tags: ["FTTH", "Fusões", "OTDR"],
   },
   {
     no: "04",
-    title: "Coaxial",
+    title: "Coaxial e sinal",
     sub: "TV · CATV · SAT",
     desc:
-      "Distribuição coaxial para TV, CATV e satélite. Montagem de repartidores, amplificadores, tomadas e ligações organizadas em ATE/ATI.",
-    tags: ["CATV", "Satélite", "Tomadas"],
+      "Distribuição coaxial para TV, CATV e satélite. Repartidores, amplificadores e tomadas — com medições de nível e qualidade de sinal usando medidor de campos profissional.",
+    tags: ["CATV", "Satélite", "Medidor de campos"],
   },
   {
     no: "05",
-    title: "Cablagem",
-    sub: "Pares de cobre · Dados",
+    title: "Cobre e dados",
+    sub: "UTP · FTP · RJ45",
     desc:
-      "Passagem e organização de UTP/FTP para dados e voz. Terminação em patch-panels, tomadas RJ45 e certificação de categoria.",
-    tags: ["Dados", "Voz", "RJ45"],
+      "Passagem e organização de UTP/FTP para dados e voz. Terminação em patch-panels, tomadas RJ45 e certificação de categoria com certificador de cobre profissional.",
+    tags: ["Dados", "Voz", "Certificador"],
   },
   {
     no: "06",
@@ -166,12 +166,12 @@ function ServiceRow({
                 y1={15}
                 x2={20 + k * 15}
                 y2={85}
-                stroke="#c9a961"
+                stroke="#3aa3d4"
                 strokeOpacity={0.35}
                 strokeWidth={k === 2 ? 1 : 0.5}
               />
             ))}
-            <circle cx="50" cy="50" r="3" fill="#c9a961" fillOpacity="0.7" />
+            <circle cx="50" cy="50" r="3" fill="#3aa3d4" fillOpacity="0.7" />
           </svg>
         </motion.div>
       </div>
@@ -197,7 +197,7 @@ export default function Services() {
             className="col-span-12 lg:col-span-3"
           >
             <span className="eyebrow" style={{ color: "var(--accent)" }}>
-              I — Trabalho
+              01 / Serviços
             </span>
           </motion.div>
           <motion.div
@@ -226,6 +226,14 @@ export default function Services() {
               </span>{" "}
               e documentada.
             </h2>
+            <p
+              className="mt-8 max-w-2xl leading-relaxed"
+              style={{ color: "var(--fg-muted)", fontSize: "0.95rem" }}
+            >
+              Trabalhamos com OTDR para fibra, certificador profissional para
+              cobre e medidor de campos para sinal de TV/SAT — registos
+              prontos a integrar no dossier da obra.
+            </p>
           </motion.div>
         </div>
 

@@ -64,12 +64,12 @@ function PhotoFrame({ photo, index }: { photo: Photo; index: number }) {
                   y1={20}
                   x2={10 + k * 16}
                   y2={130}
-                  stroke="#c9a961"
+                  stroke="#3aa3d4"
                   strokeOpacity={k % 3 === 0 ? 0.35 : 0.12}
                   strokeWidth={0.4}
                 />
               ))}
-              <circle cx="100" cy="75" r="2.5" fill="#c9a961" fillOpacity="0.7" />
+              <circle cx="100" cy="75" r="2.5" fill="#3aa3d4" fillOpacity="0.7" />
             </svg>
             <span
               className="absolute top-4 left-4 eyebrow"
@@ -123,7 +123,7 @@ export default function Gallery() {
             className="col-span-12 lg:col-span-3"
           >
             <span className="eyebrow" style={{ color: "var(--accent)" }}>
-              V — Obra
+              02 / Obra
             </span>
           </motion.div>
           <motion.div
