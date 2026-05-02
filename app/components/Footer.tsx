@@ -28,8 +28,8 @@ export default function Footer() {
         borderTop: "1px solid var(--line)",
       }}
     >
-      <div className="max-w-[1480px] mx-auto px-6 lg:px-12 py-20 lg:py-28">
-        <div className="grid grid-cols-12 gap-10 mb-20 lg:mb-28">
+      <div className="max-w-[1480px] mx-auto px-6 lg:px-12 py-16 sm:py-20 lg:py-28">
+        <div className="grid grid-cols-12 gap-8 lg:gap-10 mb-16 sm:mb-20 lg:mb-28">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

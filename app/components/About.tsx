@@ -16,7 +16,7 @@ export default function About() {
   return (
     <section
       id="sobre"
-      className="relative py-32 lg:py-44 overflow-hidden"
+      className="relative py-20 sm:py-28 lg:py-44 overflow-hidden"
       style={{ background: "var(--surface-base)" }}
       aria-labelledby="about-title"
     >

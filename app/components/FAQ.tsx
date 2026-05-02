@@ -34,7 +34,7 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="relative py-28 lg:py-36"
+      className="relative py-20 sm:py-28 lg:py-36"
       style={{ background: "var(--surface-elev)" }}
       aria-labelledby="faq-title"
     >

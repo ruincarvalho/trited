@@ -262,3 +262,35 @@ footer > * {
   html { scroll-behavior: auto; }
   .grain { display: none; }
 }
+
+@media (max-width: 640px) {
+  .hero-section h1 {
+    font-size: clamp(2.45rem, 15vw, 4rem) !important;
+    line-height: 0.98 !important;
+  }
+
+  .hero-section .hero-stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-section .hero-stat-item {
+    border-left: none !important;
+    border-top: 1px solid var(--line) !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 16px 0 !important;
+  }
+
+  .hero-section .hero-stat-item:first-child {
+    border-top: none !important;
+  }
+
+  .hero-section .hero-stat-item .font-serif {
+    font-size: clamp(1.9rem, 11vw, 3rem) !important;
+  }
+
+  .hero-section .hero-stat-label {
+    display: block;
+    line-height: 1.35;
+  }
+}

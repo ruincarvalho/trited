@@ -314,6 +314,21 @@
  #globalSearch{width:100% !important;max-width:none !important;}
  #searchResults{left:0 !important;right:0 !important;width:auto !important;max-width:none !important;}
  }
+ @media(max-width:760px){
+ .modal{width:calc(100vw - 16px);max-width:none;border-radius:16px;max-height:86vh;}
+ .app-shell table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+ .app-shell table thead,.app-shell table tbody{min-width:max-content;}
+ .app-shell td,.app-shell th{white-space:nowrap;}
+ .content-topbar-title h1{font-size:22px;line-height:1.08;}
+ .content-topbar-title p{font-size:12px;line-height:1.45;}
+ .orc-item-header{display:none;}
+ .orc-item-row{display:grid !important;grid-template-columns:1fr;gap:8px !important;padding:10px !important;align-items:stretch !important;}
+ .orc-item-row > div,.orc-item-row > button{width:100% !important;min-width:0 !important;text-align:left !important;padding-top:0 !important;}
+ .orc-item-row .orc-item-desc{flex:none !important;}
+ .orc-item-row .orc-item-total{padding-top:0 !important;text-align:left !important;}
+ .orc-item-row .orc-item-remove{justify-content:flex-start !important;}
+ .orc-item-row .input{width:100% !important;text-align:left !important;}
+ }
 
  .app-shell table{overflow:hidden;border-radius:12px;}
  .app-shell tr.clickable:hover td{background:color-mix(in srgb,var(--blue-soft) 42%,var(--card));}
@@ -5683,8 +5698,8 @@ function _renderOrcModal(){
  const draftAge = draft && draft.at ? _draftFmtAge(draft.at) : '';
 
  const itensHtml = o.itens.map((it,i) => `
- <div class="flex gap-2 mb-2 items-start flex-wrap" style="padding:8px;background:${i%2===0?'var(--bg)':'transparent'};border-radius:8px;">
- <div style="flex:2;min-width:200px;position:relative;">
+ <div class="orc-item-row flex gap-2 mb-2 items-start flex-wrap" style="padding:8px;background:${i%2===0?'var(--bg)':'transparent'};border-radius:8px;">
+ <div class="orc-item-desc" style="flex:2;min-width:200px;position:relative;">
  <input class="input" placeholder="Descrição do item..." value="${escapeAttr(it.descricao||'')}"
  oninput="window._editingOrc.itens[${i}].descricao=this.value; onOrcItemSearch(${i}, this.value)"
  onfocus="onOrcItemSearch(${i}, this.value)"
@@ -5692,12 +5707,12 @@ function _renderOrcModal(){
  id="orc-item-desc-${i}">
  <div id="orc-suggest-${i}" style="position:absolute;top:100%;left:0;right:0;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow-lg);z-index:40;max-height:200px;overflow-y:auto;display:none;margin-top:4px;"></div>
  </div>
- <div style="width:70px;"><input class="input" style="text-align:center;" value="${escapeAttr(it.unidade||'un')}" oninput="window._editingOrc.itens[${i}].unidade=this.value" placeholder="un"></div>
- <div style="width:80px;"><input class="input" type="number" min="0" step="1" style="text-align:center;" value="${it.quantidade||0}" oninput="window._editingOrc.itens[${i}].quantidade=+this.value; _updateOrcTotals()"></div>
- <div style="width:110px;"><input class="input" type="number" min="0" step="0.01" value="${it.precoUnit||0}" oninput="window._editingOrc.itens[${i}].precoUnit=+this.value; _updateOrcTotals()" placeholder="Preço"></div>
- <div style="width:78px;"><input class="input" type="number" min="0" max="100" step="0.01" style="text-align:center;" value="${it.desconto||0}" oninput="window._editingOrc.itens[${i}].desconto=+this.value; _updateOrcTotals()" title="Desconto %"></div>
- <div style="width:100px;text-align:right;padding-top:10px;font-weight:600;" id="orc-line-total-${i}">${fmt(orcLineTotal(it))}</div>
- <button class="icon-btn" onclick="removeOrcItem(${i})" style="color:var(--danger);padding-top:8px;" title="Remover">Fechar</button>
+ <div class="orc-item-unit" style="width:70px;"><input class="input" style="text-align:center;" value="${escapeAttr(it.unidade||'un')}" oninput="window._editingOrc.itens[${i}].unidade=this.value" placeholder="un"></div>
+ <div class="orc-item-qty" style="width:80px;"><input class="input" type="number" min="0" step="1" style="text-align:center;" value="${it.quantidade||0}" oninput="window._editingOrc.itens[${i}].quantidade=+this.value; _updateOrcTotals()"></div>
+ <div class="orc-item-price" style="width:110px;"><input class="input" type="number" min="0" step="0.01" value="${it.precoUnit||0}" oninput="window._editingOrc.itens[${i}].precoUnit=+this.value; _updateOrcTotals()" placeholder="Preço"></div>
+ <div class="orc-item-discount" style="width:78px;"><input class="input" type="number" min="0" max="100" step="0.01" style="text-align:center;" value="${it.desconto||0}" oninput="window._editingOrc.itens[${i}].desconto=+this.value; _updateOrcTotals()" title="Desconto %"></div>
+ <div class="orc-item-total" style="width:100px;text-align:right;padding-top:10px;font-weight:600;" id="orc-line-total-${i}">${fmt(orcLineTotal(it))}</div>
+ <button class="icon-btn orc-item-remove" onclick="removeOrcItem(${i})" style="color:var(--danger);padding-top:8px;" title="Remover">Fechar</button>
  </div>
  `).join('');
 
@@ -5753,7 +5768,7 @@ function _renderOrcModal(){
 
  <h3 class="serif text-lg font-bold mt-5 mb-3">Itens do Orçamento</h3>
  <div class="text-xs mb-2" style="color:var(--muted);">Escreva no campo "Descrição" para pesquisar itens do catálogo, ou preencha manualmente.</div>
- <div class="flex gap-2 mb-2 px-2 text-xs font-semibold" style="color:var(--muted);">
+ <div class="orc-item-header flex gap-2 mb-2 px-2 text-xs font-semibold" style="color:var(--muted);">
  <div style="flex:2;min-width:200px;">Descrição</div>
  <div style="width:70px;text-align:center;">Un.</div>
  <div style="width:80px;text-align:center;">Qtd.</div>

@@ -60,7 +60,7 @@ function StepRow({
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 36 }}
       transition={{ duration: 0.9, delay: 0.05, ease: "circOut" }}
-      className="technical-panel relative grid grid-cols-12 gap-6 py-12 lg:py-16 px-4 lg:px-6"
+      className="technical-panel relative grid grid-cols-12 gap-4 lg:gap-6 py-8 sm:py-12 lg:py-16 px-4 lg:px-6"
       style={{
         borderTop: "1px solid var(--line)",
         borderBottom: i === total - 1 ? "1px solid var(--line)" : "none",
@@ -121,12 +121,12 @@ export default function Process() {
   return (
     <section
       id="processo"
-      className="relative py-32 lg:py-44"
+      className="relative py-20 sm:py-28 lg:py-44"
       style={{ background: "var(--surface-base)" }}
       aria-labelledby="processo-title"
     >
       <div className="max-w-[1480px] mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-12 gap-6 mb-20 lg:mb-24">
+        <div className="grid grid-cols-12 gap-6 mb-14 sm:mb-20 lg:mb-24">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}

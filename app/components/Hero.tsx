@@ -25,11 +25,11 @@ export default function Hero() {
     <section
       ref={ref}
       id="inicio"
-      className="relative min-h-[100svh] flex flex-col"
+      className="hero-section relative min-h-[100svh] flex flex-col"
       style={{ background: "var(--surface-base)" }}
       aria-label="Apresentação TRITED"
     >
-      <div className="relative flex-1 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 max-w-[1480px] mx-auto px-6 lg:px-12 pt-36 lg:pt-44 pb-24 w-full">
+      <div className="relative flex-1 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 max-w-[1480px] mx-auto px-6 lg:px-12 pt-28 lg:pt-44 pb-16 lg:pb-24 w-full">
         {/* Headline column */}
         <div className="lg:col-span-7 flex flex-col justify-center">
           <motion.div
@@ -245,17 +245,17 @@ export default function Hero() {
 
       {/* Bottom stats rail */}
       <div
-        className="relative w-full border-t"
+        className="hero-stats relative w-full border-t"
         style={{ borderColor: "var(--line)" }}
       >
-        <div className="max-w-[1480px] mx-auto px-6 lg:px-12 grid grid-cols-3">
+        <div className="max-w-[1480px] mx-auto px-6 lg:px-12 grid grid-cols-3 hero-stats-grid">
           {stats.map((s, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4 + i * 0.12, duration: 0.8, ease: "easeOut" }}
-              className={`technical-panel py-7 lg:py-9 ${
+              className={`technical-panel hero-stat-item py-7 lg:py-9 ${
                 i > 0 ? "border-l" : ""
               } px-3 lg:px-6 flex items-baseline gap-4`}
               style={{ borderColor: "var(--line)" }}
@@ -272,7 +272,7 @@ export default function Hero() {
                 <AnimatedCounter value={s.value} suffix={s.suffix} duration={1.8} />
               </span>
               <span
-                className="text-xs"
+                className="hero-stat-label text-xs"
                 style={{ color: "var(--fg-muted)", letterSpacing: "0.1em" }}
               >
                 {s.label}
