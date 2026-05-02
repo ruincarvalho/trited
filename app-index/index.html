@@ -307,6 +307,7 @@
  .sidebar{position:static;height:auto;border-right:none;border-bottom:1px solid var(--line);padding:14px 14px 10px;gap:12px;}
  .content-topbar{padding:16px 18px;}
  #view{padding:18px;}
+ .app-footer{padding:14px 18px;}
  }
  @media(max-width:640px){
  .content-topbar{flex-direction:column;align-items:stretch;}
@@ -322,6 +323,10 @@
  .sidebar-user-label{grid-column:1 / -1;}
  .sidebar-user-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
  .sidebar-user-actions .btn{width:100%;}
+ .app-footer-inner{align-items:stretch;}
+ .app-footer .sidebar-user-label{grid-column:1 / -1;}
+ .app-footer .sidebar-user-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+ .app-footer .sidebar-user-actions .btn{width:100%;}
  .content-topbar{gap:10px;}
  .content-topbar-actions{display:flex;flex-direction:column;align-items:stretch;width:100%;}
  .content-topbar-actions #searchResults{position:static;max-width:none;width:100%;margin-top:8px;}
@@ -351,6 +356,8 @@
 
  .app-shell table{overflow:hidden;border-radius:12px;}
  .app-shell tr.clickable:hover td{background:color-mix(in srgb,var(--blue-soft) 42%,var(--card));}
+ .app-footer{border-top:1px solid var(--line);background:color-mix(in srgb,var(--card) 90%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:18px 24px;}
+ .app-footer-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
  .dashboard-hero{position:relative;overflow:hidden;border-color:color-mix(in srgb,var(--blue) 30%,var(--line));background:linear-gradient(135deg,color-mix(in srgb,var(--card) 72%,var(--blue-soft)) 0%,var(--bg-alt) 100%);}
  .dashboard-hero::after{content:'';position:absolute;inset:auto -80px -120px auto;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--accent) 18%,transparent),transparent 68%);pointer-events:none;}
  .dashboard-kpi{min-height:132px;position:relative;overflow:hidden;}
@@ -488,14 +495,6 @@ window.doLogin = window.__tritedEarlyLogin;
  <div class="sidebar-mid">
  <nav id="tabs" class="sidebar-tabs"></nav>
  </div>
- <div class="sidebar-bottom">
- <div class="sidebar-user-label">Sessão</div>
- <span id="sessionUserPill" class="chip" style="display:none;"></span>
- <div class="sidebar-user-actions">
- <button id="switchUserBtn" class="btn btn-ghost" onclick="switchUser()" style="display:none;">Trocar utilizador</button>
- <button id="logoutBtn" class="btn btn-ghost" onclick="logout()" style="display:none;">Sair</button>
- </div>
- </div>
  </aside>
  <section class="app-content">
  <header class="content-topbar">
@@ -509,6 +508,16 @@ window.doLogin = window.__tritedEarlyLogin;
  </div>
  </header>
  <main id="view"></main>
+ <footer class="app-footer">
+ <div class="app-footer-inner">
+ <div class="sidebar-user-label">Sessão</div>
+ <span id="sessionUserPill" class="chip" style="display:none;"></span>
+ <div class="sidebar-user-actions">
+ <button id="switchUserBtn" class="btn btn-ghost" onclick="switchUser()" style="display:none;">Trocar utilizador</button>
+ <button id="logoutBtn" class="btn btn-ghost" onclick="logout()" style="display:none;">Sair</button>
+ </div>
+ </div>
+ </footer>
  </section>
 </div>
 
