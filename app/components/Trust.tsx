@@ -30,9 +30,9 @@ const pillars = [
       "Trabalhamos dentro do regulamento ITED/ITUR e da prática que ele exige — sem atalhos no que é estrutural.",
   },
   {
-    title: "Cobertura nacional",
+    title: "Mão sénior em obra",
     desc:
-      "Trabalhamos em todo o país, com equipas móveis preparadas para obras, intervenções técnicas e certificações.",
+      "Trabalhamos com um técnico com mais de 50 anos a fazer telecomunicações — experiência que se vê no acabamento.",
   },
 ];
 
@@ -57,7 +57,7 @@ export default function Trust() {
             className="col-span-12 lg:col-span-3"
           >
             <span className="eyebrow" style={{ color: "var(--accent)" }}>
-              V — Princípios
+              VI — Princípios
             </span>
           </motion.div>
           <motion.div

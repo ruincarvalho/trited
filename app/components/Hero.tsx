@@ -6,8 +6,8 @@ import SplitWords from "./motion/SplitWords";
 import AnimatedCounter from "./motion/AnimatedCounter";
 
 const stats = [
-  { value: 12, suffix: "+", label: "Anos de obra" },
-  { value: 480, suffix: "+", label: "Pontos terminados" },
+  { value: 4, suffix: "+", label: "Anos na área" },
+  { value: 50, suffix: "+", label: "Anos de experiência técnica" },
   { value: 100, suffix: "%", label: "ITED · ITUR" },
 ];
 
@@ -34,10 +34,9 @@ export default function Hero() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
-        className="absolute top-24 left-6 lg:left-12 right-6 lg:right-12 z-10 flex items-center justify-between"
+        className="absolute top-24 left-6 lg:left-12 right-6 lg:right-12 z-10 flex items-center"
       >
         <span className="eyebrow">N.º 001 — Edição contínua</span>
-        <span className="eyebrow hidden md:inline">Serviço em todo o país</span>
       </motion.div>
 
       <div className="relative flex-1 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 max-w-[1480px] mx-auto px-6 lg:px-12 pt-44 lg:pt-52 pb-24 w-full">

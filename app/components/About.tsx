@@ -4,11 +4,9 @@ import { motion } from "motion/react";
 import SplitWords from "./motion/SplitWords";
 
 const manifesto = [
-  "Instalações realizadas com rigor técnico.",
-  "Foco total em telecomunicações ITED/ITUR.",
-  "Ensaios e certificações com equipamentos especializados.",
-  "Dossier técnico incluído quando a obra o exige.",
-  "Comunicação clara, do orçamento à entrega.",
+  "Uma só especialidade: telecomunicações.",
+  "Equipa pequena, decisões rápidas em obra.",
+  "Acabamento técnico que se vê dentro do bastidor.",
 ];
 
 export default function About() {
@@ -29,7 +27,7 @@ export default function About() {
             className="col-span-12 lg:col-span-3"
           >
             <span className="eyebrow" style={{ color: "var(--accent)" }}>
-              VI — Empresa
+              VII — Empresa
             </span>
           </motion.div>
           <div className="col-span-12 lg:col-span-9">
@@ -167,10 +165,8 @@ export default function About() {
               className="mt-8 leading-relaxed max-w-xl"
               style={{ color: "var(--fg-muted)" }}
             >
-              Trabalhamos em obra nova, remodelação, loteamentos e edifícios
-              existentes para particulares, construtores, eletricistas,
-              projetistas e condomínios. Instalamos, organizamos, testamos e
-              documentamos redes com método de obra.
+              Não fazemos eletricidade, climatização nem alarmes. Fazemos só
+              telecomunicações — e fazemo-las com método de obra.
             </p>
 
             <ul className="mt-12 space-y-0">

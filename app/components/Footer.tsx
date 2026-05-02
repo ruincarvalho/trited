@@ -53,9 +53,8 @@ export default function Footer() {
               className="mt-6 max-w-md leading-relaxed"
               style={{ color: "var(--fg-muted)" }}
             >
-              Empresa dedicada a infraestruturas de telecomunicações ITED e
-              ITUR. Instalação, organização e certificação de bastidores, ATE
-              e ATI em todo o país.
+              Telecomunicações ITED e ITUR — instalação, organização e
+              certificação técnica.
             </p>
             <div className="mt-10 flex items-center gap-3">
               <motion.span

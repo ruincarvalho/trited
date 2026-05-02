@@ -12,9 +12,9 @@ const requirements = [
 ];
 
 const delivery = [
-  "Pontos técnicos identificados",
-  "Cabos organizados e etiquetados",
-  "ATE, ATI ou bastidor arrumado",
+  "Tomadas e caixas etiquetadas",
+  "Cabos organizados dentro do bastidor",
+  "ATE, ATI ou bastidor fechado e arrumado",
   "Ensaios realizados quando aplicável",
   "Registos e medições documentados",
   "Dossier final preparado quando necessário",

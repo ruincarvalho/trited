@@ -4,6 +4,7 @@ import Services from "./components/Services";
 import TechnicalProof from "./components/TechnicalProof";
 import Clients from "./components/Clients";
 import Process from "./components/Process";
+import Gallery from "./components/Gallery";
 import Trust from "./components/Trust";
 import About from "./components/About";
 import QuoteGuide from "./components/QuoteGuide";
@@ -22,6 +23,7 @@ export default function Home() {
         <TechnicalProof />
         <Clients />
         <Process />
+        <Gallery />
         <Trust />
         <About />
         <QuoteGuide />

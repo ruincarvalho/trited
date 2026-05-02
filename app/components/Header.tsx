@@ -18,8 +18,6 @@ const navLinks = [
 ];
 
 export default function Header() {
-  const basePath = process.env.NEXT_PUBLIC_SITE_BASE_PATH || "";
-  const appHref = `${basePath}/app/`;
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -99,24 +97,21 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-4">
-            <motion.a
-              href={appHref}
+          <div className="flex items-center gap-4 lg:gap-6">
+            <motion.span
               initial={{ opacity: 0, x: 8 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.82, duration: 0.5, ease: "easeOut" }}
-              className="hidden md:inline-flex items-center gap-3 text-sm group"
-              style={{ color: "var(--fg-muted)" }}
+              className="hidden lg:inline-flex items-center gap-2 eyebrow"
+              style={{ color: "var(--fg-dim)", fontSize: "0.625rem" }}
             >
-              <span className="relative">
-                App
-                <span
-                  aria-hidden
-                  className="absolute left-0 right-0 -bottom-1 h-px origin-left scale-x-0 transition-transform duration-500 group-hover:scale-x-100"
-                  style={{ background: "var(--accent)" }}
-                />
-              </span>
-            </motion.a>
+              <span
+                aria-hidden
+                className="block w-6 h-px"
+                style={{ background: "var(--accent)" }}
+              />
+              Serviço em todo o país
+            </motion.span>
 
             <motion.a
               href="#contactos"
@@ -204,19 +199,6 @@ export default function Header() {
                   </span>
                 </motion.a>
               ))}
-              <a
-                href={appHref}
-                className="mt-2 inline-flex items-center justify-center gap-2 px-6 py-4 text-sm border"
-                style={{
-                  borderColor: "var(--line)",
-                  color: "var(--fg)",
-                  letterSpacing: "0.12em",
-                  textTransform: "uppercase",
-                }}
-                onClick={() => setMenuOpen(false)}
-              >
-                Abrir app
-              </a>
               <a
                 href="#contactos"
                 className="mt-6 inline-flex items-center justify-center gap-2 px-6 py-4 text-sm border"
